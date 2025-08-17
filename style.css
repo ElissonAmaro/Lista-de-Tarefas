@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #4e73df;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.ContainerTarefas {
+  width: 450px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.Menu {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#InutText {
+  flex: 1;
+  height: 45px;
+  padding: 0 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+#InutText:focus {
+  border-color: #4e73df;
+}
+
+#BtnAdd {
+  height: 45px;
+  padding: 0 20px;
+  background: #4e73df;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+#BtnAdd:hover {
+  background: #2e59d9;
+}
+
+.divbuscar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#Inputsearch {
+  flex: 1;
+  height: 45px;
+  padding: 0 15px 0 40px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s, width 0.3s;
+  width: 100%;
+}
+
+.divbuscar button {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.divbuscar img {
+  width: 20px;
+}
+
+.itens {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f1f3f5;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  min-height: 50px;
+}
+
+.card:hover {
+  background: #e9ecef;
+}
+
+.card li {
+  flex: 1;
+  list-style: none;
+  margin-left: 15px;
+  font-size: 16px;
+  color: #333;
+}
+
+.card .btnexcluir {
+  background: #e03131;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.card .btnexcluir:hover {
+  background: #c92a2a;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media (max-width: 480px) {
+  .ContainerTarefas {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    padding: 20px;
+  }
+
+  .Menu, .divbuscar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #InutText, #BtnAdd, #Inputsearch {
+    width: 100%;
+  }
+}
