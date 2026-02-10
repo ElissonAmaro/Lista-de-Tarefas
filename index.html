@@ -1,29 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarefas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tarefas</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+  <body>
+    <div class="ContainerTarefas">
+      <header>
+        <h1>Lista de Tarefas</h1>
+      </header>
 
-<body>
-  <div class="ContainerTarefas">
-    <h1>Lista de Tarefas</h1>
-    <div class="Menu">
-      <input type="text" name="InutText" id="InutText" autocomplete="off" placeholder="Nova tarefa...">
-      <button id="BtnAdd">Adicionar</button>
+      <main>
+        <section class="adicionar-tarefa">
+          <h2>Adicionar Nova Tarefa</h2>
+          <form class="Menu" role="form">
+            <label for="InutText" class="sr-only">Nova tarefa</label>
+            <input
+              type="text"
+              name="InutText"
+              id="InutText"
+              autocomplete="off"
+              placeholder="Nova tarefa..."
+              required
+              aria-label="Digite uma nova tarefa"
+            />
+            <button type="submit" id="BtnAdd">Adicionar</button>
+          </form>
+        </section>
+
+        <section class="buscar-tarefa">
+          <h2>Buscar Tarefas</h2>
+          <form class="divbuscar" role="search">
+            <button type="submit" aria-label="Buscar tarefa">
+              <img src="src/search.png" alt="" id="buscar" />
+              <span class="sr-only">Buscar</span>
+            </button>
+            <label for="Inputsearch" class="sr-only">Buscar tarefa</label>
+            <input
+              type="search"
+              name="search"
+              id="Inputsearch"
+              placeholder="Buscar tarefa"
+              aria-label="Digite para buscar uma tarefa"
+            />
+          </form>
+        </section>
+
+        <section class="lista-tarefas">
+          <h2>Suas Tarefas</h2>
+          <div
+            class="itens"
+            role="list"
+            aria-live="polite"
+            aria-label="Lista de tarefas"
+          ></div>
+        </section>
+      </main>
     </div>
-
-    <div class="divbuscar">
-      <button><img src="src/search.png" alt="Buscar" id="buscar"></button>
-      <input type="search" name="search" id="Inputsearch" placeholder="Buscar tarefa">
-    </div>
-
-    <div class="itens"></div>
-  </div>
-</body>
-<script src="config.js"></script>
-
+  </body>
+  <script src="config.js"></script>
 </html>

@@ -24,3 +24,11 @@ Este é um projeto simples de uma lista de tarefas (To-Do List) criado com HTML,
 -   HTML5
 -   CSS3
 -   JavaScript
+
+## Clonar o repositório
+
+Para clonar este repositório para sua máquina local, execute:
+
+```
+https://github.com/ElissonAmaro/Lista-de-Tarefas.git
+```
